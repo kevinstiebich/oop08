@@ -1,0 +1,3 @@
+import "coinstack.dart";
+
+main() {}
