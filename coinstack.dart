@@ -48,11 +48,11 @@ class CoinStack {
     return CoinStack(coins: [...coins, ...other.coins]);
   }
 
-  CoinStack? operator -(CoinStack other) {
+  CoinStack operator -(CoinStack other) {
     if (value > other.value) {
       return CoinStack(coins: [...coins, ...other.coins]);
     } else {
-      return null;
+      return CoinStack(coins: [0]);
     }
   }
 }
