@@ -36,6 +36,7 @@ class CoinStack {
     }
   }
 
+  @override
   bool operator ==(Object other) {
     if (other is CoinStack) {
       return value == other.value;
@@ -43,6 +44,9 @@ class CoinStack {
       return false;
     }
   }
+
+  @override
+  int get hashCode => Object.hash(value, 0);
 
   CoinStack operator +(CoinStack other) {
     return CoinStack(coins: [...coins, ...other.coins]);
